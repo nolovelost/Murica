@@ -65,6 +65,9 @@ public class Graph : MonoBehaviour
                 {
                     for (int j = -1; j <= 1; j++)
                     {
+                        if (i == 0 && j == 0)
+                            continue;
+
                         Vector3Int neighbourPos = new Vector3Int(node.gridPos.x + i,
                             node.gridPos.y + j,
                             node.gridPos.z);
