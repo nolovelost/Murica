@@ -44,7 +44,7 @@ public class DebugGraph : MonoBehaviour
                 {
                     Debug.DrawLine(graph.grid.GetCellCenterWorld(connection.fromNode.gridPos),
                         graph.grid.GetCellCenterWorld(connection.toNode.gridPos),
-                        Color.green);
+                        Color.blue);
                 }
             }
         }

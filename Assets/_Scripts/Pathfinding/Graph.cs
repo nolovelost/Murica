@@ -68,6 +68,7 @@ public class Graph : MonoBehaviour
                         if (i == 0 && j == 0)
                             continue;
 
+                        int isDiagonal = Mathf.Abs(i) * Mathf.Abs(j);
                         Vector3Int neighbourPos = new Vector3Int(node.gridPos.x + i,
                             node.gridPos.y + j,
                             node.gridPos.z);
@@ -80,6 +81,12 @@ public class Graph : MonoBehaviour
                                 Connection connection = ScriptableObject.CreateInstance<Connection>();
                                 connection.fromNode = node;
                                 connection.toNode = neighbourNode;
+
+                                if (isDiagonal == 1)
+                                    connection.cost = connection.toNode.cost * 2;
+                                else
+                                    connection.cost = connection.toNode.cost;
+
                                 node.connections.Add(connection);
                             }
                         }

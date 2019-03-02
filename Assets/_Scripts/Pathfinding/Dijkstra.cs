@@ -37,7 +37,7 @@ public class Dijkstra
             {
                 // Update total cost estimate
                 nextNode = connection.toNode;
-                nextNodeCost += connection.toNode.cost;
+                nextNodeCost += connection.cost;
 
                 // Skip to next node if this one is already closed
                 if (closedNodes.Exists(x => x.node == nextNode))
@@ -81,7 +81,6 @@ public class Dijkstra
         Path path = new Path();
         while (current.node != startNode)
         {
-            Debug.Log("Current node pos for path: " + current.node.gridPos);
             path.connections.Add(current.connection);
             current = current.fromNodeInPath;
         }

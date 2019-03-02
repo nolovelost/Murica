@@ -6,6 +6,7 @@ public class Connection : ScriptableObject
 {
     public NavSurface fromNode { get; set; }
     public NavSurface toNode { get; set; }
+    public float cost;
 
 
     public float GetCost()
