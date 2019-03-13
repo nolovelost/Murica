@@ -10,6 +10,9 @@ public class SmartTile : Tile
 {
     public NavSurface nav;
 
+    SmartTile()
+    {    }
+
 #if UNITY_EDITOR
     // The following is a helper that adds a menu item to create a RoadTile Asset
     [MenuItem("Assets/Create/SmartTile")]

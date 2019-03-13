@@ -77,6 +77,6 @@ public class KeyboardInput : MonoBehaviour, IInput
     // Set Character Data
     void Update()
     {
-        characterInput.SetRawAxisCmd(EAxisCommand.Movement, GetNormalisedDirection())
+        //characterInput.SetRawAxisCmd(EAxisCommand.Movement, GetNormalisedDirection())
     }
 }
